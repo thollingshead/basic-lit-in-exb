@@ -1,0 +1,6 @@
+{
+  "name": "exb-widget",
+  "dependencies": {
+    "basic-lit-component": "file:../basic-lit-component"
+  }
+}

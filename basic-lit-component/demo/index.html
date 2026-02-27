@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <style>
+      body {
+        background: #fafafa;
+      }
+    </style>
+
+    <!-- Load the JavaScript Maps SDK core API -->
+    <script src="https://js.arcgis.com/4.34/"></script>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      import { html, render } from "lit";
+      import "../dist/src/basic-lit-component.js";
+
+      render(
+        html`
+          <basic-lit-component>
+            <div>Child</div>
+          </basic-lit-component>
+        `,
+        document.querySelector("#demo"),
+      );
+    </script>
+  </body>
+</html>

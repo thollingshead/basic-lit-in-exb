@@ -1,0 +1,32 @@
+{
+  "name": "basic-lit-component",
+  "description": "Webcomponent basic-lit-component following open-wc recommendations",
+  "license": "MIT",
+  "author": "basic-lit-component",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.js",
+  "exports": {
+    ".": "./dist/src/index.js",
+    "./basic-lit-component.js": "./dist/src/basic-lit-component.js"
+  },
+  "scripts": {
+    "analyze": "cem analyze --litelement",
+    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"web-dev-server\"",
+    "build": "tsc && npm run analyze -- --exclude dist",
+    "prepublish": "tsc && npm run analyze -- --exclude dist"
+  },
+  "dependencies": {
+    "@arcgis/core-adapter": "^4.34.9",
+    "lit": "^3.1.4"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@web/dev-server": "^0.4.6",
+    "concurrently": "^8.2.2",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.3"
+  },
+  "customElements": "custom-elements.json"
+}
